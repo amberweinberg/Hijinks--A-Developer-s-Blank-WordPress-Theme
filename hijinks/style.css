@@ -1,0 +1,51 @@
+/*
+Theme Name: NAME OF THEME
+Description: This theme was coded for CLIENT by YOUR NAME.
+Author: YOUR NAME
+Author URI: http://www.YOURURL.com/
+
+*/
+
+/*****CSS RESET*******/
+
+html,body,div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,code,em,img,small,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,ol,ul,li{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent; }body{line-height: 1;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content: '';content: none }table{border-collapse:collapse;border-spacing: 0;}
+
+/****BODY STYLES********/
+
+body { background: url('images/bkg.jpg') #FFF; color: #000; font: 14px Arial, Helvetica, sans-serif; margin: 0 auto; width: 996px; }
+
+p {}
+
+h1 {}
+h2 {}
+h3 {}
+
+a { text-decoration: none; }
+a:hover {}
+
+/****HEADER STYLES*******/
+
+
+/*****NAV STYLES*******/
+
+
+/*****FOOTER STYLES*******/
+
+
+/*****HOME CONTENT STYLES*******/
+
+
+/*****SUB CONTENT STYLES*******/
+
+.alignleft { float: left; margin-right: 15px; }
+.alignright { float: right; margin-left: 15px; }
+
+/*Blog*/
+
+.single #comments { float: left; margin-top: 30px; width: 100%; }
+.single .commentlist { float: left; position: relative; width: 100%; }
+.single .commentlist > li { padding: 10px; }
+.single .comment-author img { float: left; margin-right: 5px; }
+.single .commentmetadata { position: absolute; right: 10px; top: 10px; }
+
+#respond { float: left; margin-top: 30px; }
