@@ -41,6 +41,8 @@ function wpe_excerpt($length_callback='', $more_callback='') {
 }
 
 add_theme_support( 'post-thumbnails' );
+set_post_thumbnail_size( 50, 50, true );
+add_image_size( 'category-thumb', 300, 9999, true );
 
 register_post_type('floorplans', array(
 	'label' => __('Floorplans'),
