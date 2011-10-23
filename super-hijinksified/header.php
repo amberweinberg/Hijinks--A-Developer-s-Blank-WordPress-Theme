@@ -16,8 +16,6 @@
 		<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 		<?php wp_head(); ?>
 		
-		 <meta name="viewport" content="width=device-width,initial-scale=1">
-
   		<script src="<?php bloginfo('template_url');?>/js/libs/modernizr-2.0.6.min.js"></script>
 	</head>
 	
