@@ -1,6 +1,4 @@
 		<footer></footer>
-
-		<?php wp_footer(); ?>
 		
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 		<script defer src="<?php bloginfo('template_url');?>/js/plugins.js"></script>
@@ -16,6 +14,8 @@
 		  <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
 		  <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
 		<![endif]-->
+		
+		<?php wp_footer(); ?>
 	
 	</body>
 </html>
