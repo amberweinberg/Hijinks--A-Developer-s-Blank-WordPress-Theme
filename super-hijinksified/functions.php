@@ -44,9 +44,9 @@ add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 50, 50, true );
 add_image_size( 'category-thumb', 300, 9999, true );
 
-register_post_type('floorplans', array(
-	'label' => __('Floorplans'),
-	'singular_label' => __('Floorplans'),
+register_post_type('custom', array(
+	'label' => __('Custom Post Type'),
+	'singular_label' => __('Custom Post Type'),
 	'public' => true,
 	'show_ui' => true,
 	'capability_type' => 'post',
@@ -55,24 +55,10 @@ register_post_type('floorplans', array(
 	'query_var' => false,
 	'supports' => array('title', 'editor', 'author'),
 ));
-
-register_post_type('design', array(
-	'label' => __('Design Center'),
-	'singular_label' => __('Design Center'),
-	'public' => true,
-	'show_ui' => true,
-	'capability_type' => 'post',
-	'hierarchical' => false,
-	'rewrite' => true,
-	'query_var' => false,
-	'supports' => array('title', 'editor', 'author'),
-));
-
 add_action( 'init', 'build_taxonomies', 0 );
 
 function build_taxonomies() {
-    register_taxonomy( 'plans', 'floorplans', array( 'hierarchical' => true, 'label' => 'Plans', 'query_var' => true, 'rewrite' => true ) );
-    register_taxonomy( 'options', 'design', array( 'hierarchical' => true, 'label' => 'Options', 'query_var' => true, 'rewrite' => true ) );
+    register_taxonomy( 'tax', 'custom', array( 'hierarchical' => true, 'label' => 'Custom Taxonomy', 'query_var' => true, 'rewrite' => true ) );
   
 }
 
