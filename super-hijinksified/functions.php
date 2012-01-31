@@ -58,9 +58,6 @@ register_post_type('custom', array(
 add_action( 'init', 'build_taxonomies', 0 );
 
 function build_taxonomies() {
-    register_taxonomy( 'tax', 'custom', array( 'hierarchical' => true, 'label' => 'Custom Taxonomy', 'query_var' => true, 'rewrite' => true ) );
-  
+    register_taxonomy( 'taxo', 'custom', array( 'hierarchical' => true, 'label' => 'Custom Taxonomy', 'query_var' => true, 'rewrite' => true ) ); 
 }
-
-
 ?>
