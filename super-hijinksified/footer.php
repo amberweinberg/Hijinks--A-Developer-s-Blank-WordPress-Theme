@@ -1,6 +1,7 @@
 		<footer></footer>
 		
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="<?php bloginfo('template_url');?>/js/libs/jquery-1.7.1.min.js"><\/script>')</script>
 		<script defer src="<?php bloginfo('template_url');?>/js/plugins.js"></script>
 		<script defer src="<?php bloginfo('template_url');?>/js/script.js"></script>
 		<script> // Change UA-XXXXX-X to be your site's ID
