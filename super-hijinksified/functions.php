@@ -1,5 +1,7 @@
 <?php
 
+// Sidebars
+
 if ( function_exists('register_sidebar') ) {
 	register_sidebar(array(
 		'before_widget' => '<li id="%1$s" class="widget %2$s">',
@@ -9,15 +11,12 @@ if ( function_exists('register_sidebar') ) {
 	));
 }
 
+// Add Custom Menus
+
 add_theme_support( 'menus' );
 
-function wpe_excerptlength_news($length) {
-    return 15;
-}
+// Add Custom Excerpt Lengths
 
-function wpe_excerptlength_teaser($length) {
-    return 35;
-}
 function wpe_excerptlength_index($length) {
     return 160;
 }
@@ -40,9 +39,13 @@ function wpe_excerpt($length_callback='', $more_callback='') {
     echo $output;
 }
 
+// Add Post Thumbnails
+
 add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 50, 50, true );
 add_image_size( 'category-thumb', 300, 9999, true );
+
+// Add Custom Post Thumbnails & Taxonomies
 
 register_post_type('custom', array(
 	'label' => __('Custom Post Type'),
@@ -59,5 +62,47 @@ add_action( 'init', 'build_taxonomies', 0 );
 
 function build_taxonomies() {
     register_taxonomy( 'taxo', 'custom', array( 'hierarchical' => true, 'label' => 'Custom Taxonomy', 'query_var' => true, 'rewrite' => true ) ); 
+}
+
+// Add Custom Meta Boxes
+
+add_action( 'add_meta_boxes', 'cd_add_meta' );
+function cd_add_quote_meta()
+{
+    add_meta_box( 'quote-meta', __( 'A Custom Meta Box' ), 'cd_quote_meta_cb', 'page', 'normal', 'high' );
+}
+
+function cd_quote_meta_cb( $post )
+{
+    // Get values for filling in the inputs if we have them.
+    $customMeta = get_post_meta( $post->ID, '_cd_custom_meta', true );
+
+    // Nonce to verify intention later
+    wp_nonce_field( 'save_quote_meta', 'custom_nonce' );
+    ?>
+    <p>
+        <label for="customMeta">The title</label>
+         <input type="text" class="widefat" id="customMeta" name="_cd_custom_meta" value="<?php echo $customMeta;?>" />
+    </p>    
+<?php
+
+}
+
+add_action( 'save_post', 'cd_custom_meta_save' );
+function cd_custom_meta_save( $id )
+{
+    if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
+
+    if( !isset( $_POST['quote_nonce'] ) || !wp_verify_nonce( $_POST['custom_nonce'], 'save_custom_meta' ) ) return;
+
+    if( !current_user_can( 'edit_post' ) ) return;
+
+    $allowed = array(
+        'p' => array()
+    );
+
+    if( isset( $_POST['_cd_custom_meta'] ) )
+        update_post_meta( $id, '_cd_custom_meta', wp_kses( $_POST['_cd_custom_meta']) );
+
 }
 ?>
