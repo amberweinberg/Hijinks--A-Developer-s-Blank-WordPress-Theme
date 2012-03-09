@@ -4,10 +4,11 @@
 
 if ( function_exists('register_sidebar') ) {
 	register_sidebar(array(
+		'name' => 'Pages',
 		'before_widget' => '<li id="%1$s" class="widget %2$s">',
 		'after_widget' => '</li>',
-		'before_title' => '<h3>',
-		'after_title' => '</h3>',
+		'before_title' => '<h2>',
+		'after_title' => '</h2>',
 	));
 }
 
@@ -66,7 +67,7 @@ function build_taxonomies() {
 
 // Add Custom Meta Boxes
 
-add_action( 'add_meta_boxes', 'cd_add_meta' );
+add_action( 'add_meta_boxes', 'cd_add_quotet_meta' );
 function cd_add_quote_meta()
 {
     add_meta_box( 'quote-meta', __( 'A Custom Meta Box' ), 'cd_quote_meta_cb', 'page', 'normal', 'high' );
