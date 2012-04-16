@@ -67,7 +67,7 @@ function build_taxonomies() {
 
 // Add Custom Meta Boxes
 
-add_action( 'add_meta_boxes', 'cd_add_quotet_meta' );
+add_action( 'add_meta_boxes', 'cd_add_quote_meta' );
 function cd_add_quote_meta()
 {
     add_meta_box( 'quote-meta', __( 'A Custom Meta Box' ), 'cd_quote_meta_cb', 'page', 'normal', 'high' );
@@ -92,15 +92,6 @@ function cd_quote_meta_cb( $post )
 add_action( 'save_post', 'cd_custom_meta_save' );
 function cd_custom_meta_save( $id )
 {
-    if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
-
-    if( !isset( $_POST['quote_nonce'] ) || !wp_verify_nonce( $_POST['custom_nonce'], 'save_custom_meta' ) ) return;
-
-    if( !current_user_can( 'edit_post' ) ) return;
-
-    $allowed = array(
-        'p' => array()
-    );
 
     if( isset( $_POST['_cd_custom_meta'] ) )
         update_post_meta( $id, '_cd_custom_meta', wp_kses( $_POST['_cd_custom_meta']) );
