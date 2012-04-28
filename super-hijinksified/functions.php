@@ -94,7 +94,7 @@ function cd_custom_meta_save( $id )
 {
 
     if( isset( $_POST['_cd_custom_meta'] ) )
-        update_post_meta( $id, '_cd_custom_meta', wp_kses( $_POST['_cd_custom_meta']) );
+        update_post_meta( $id, '_cd_custom_meta', $_POST['_cd_custom_meta'] );
 
 }
 ?>

@@ -41,11 +41,10 @@ a:hover {}
 
 /*Blog*/
 
-.single #comments { float: left; margin-top: 30px; width: 100%; }
-.single .commentlist { float: left; position: relative; width: 100%; }
-.single .commentlist > li { padding: 10px; }
-.single .comment-author img { float: left; margin-right: 5px; }
-.single .commentmetadata { position: absolute; right: 10px; top: 10px; }
+.commentlist { float: left; margin: 0; list-style: none; padding: 0; position: relative; width: 100%; }
+.commentlist > li { padding: 10px; }
+.comment-author img { float: left; margin-right: 5px; }
+.commentmetadata { position: absolute; right: 10px; top: 10px; }
 
 #respond { float: left; margin-top: 30px; }
 
