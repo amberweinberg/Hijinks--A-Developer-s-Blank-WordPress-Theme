@@ -1,6 +1,6 @@
 <?php
 
-// Sidebars
+// ******************* Sidebars ****************** //
 
 if ( function_exists('register_sidebar') ) {
 	register_sidebar(array(
@@ -12,11 +12,11 @@ if ( function_exists('register_sidebar') ) {
 	));
 }
 
-// Add Custom Menus
+// ******************* Add Custom Menus ****************** //
 
 add_theme_support( 'menus' );
 
-// Add Custom Excerpt Lengths
+// ******************* Add Custom Excerpt Lengths ****************** //
 
 function wpe_excerptlength_index($length) {
     return 160;
@@ -40,13 +40,13 @@ function wpe_excerpt($length_callback='', $more_callback='') {
     echo $output;
 }
 
-// Add Post Thumbnails
+// ******************* Add Post Thumbnails ****************** //
 
 add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 50, 50, true );
 add_image_size( 'category-thumb', 300, 9999, true );
 
-// Add Custom Post Thumbnails & Taxonomies
+// ******************* Add Custom Post Thumbnails & Taxonomies ****************** //
 
 register_post_type('custom', array(
 	'label' => __('Custom Post Type'),
@@ -65,7 +65,7 @@ function build_taxonomies() {
     register_taxonomy( 'taxo', 'custom', array( 'hierarchical' => true, 'label' => 'Custom Taxonomy', 'query_var' => true, 'rewrite' => true ) ); 
 }
 
-// Add Custom Meta Boxes
+// ******************* Add Custom Meta Boxes ****************** //
 
 add_action( 'add_meta_boxes', 'cd_add_quote_meta' );
 function cd_add_quote_meta()
