@@ -97,4 +97,29 @@ function cd_custom_meta_save( $id )
         update_post_meta( $id, '_cd_custom_meta', $_POST['_cd_custom_meta'] );
 
 }
+
+// ******************* Add Custom Meta Boxes ****************** //
+
+
+function themename_customize_register($wp_customize){
+    $wp_customize->add_section('themename_section_name', array(
+	    'title' => __('Section Title', 'themename'),
+	    'priority' => 120,
+	));
+	
+	$wp_customize->add_setting('themename_theme_options[themename_option_name]', array(
+	    'default'        => 'Input description',
+	    'capability'     => 'edit_theme_options',
+	    'type'           => 'option',
+	));
+	
+	$wp_customize->add_control('themename_option_name', array(
+	    'label'      => __('Name of option', 'themename'),
+	    'section'    => 'themename_section_name',
+	    'settings'   => 'themename_theme_options[themename_option_name]',
+	));
+}
+
+add_action('customize_register', 'themename_customize_register');
+
 ?>
