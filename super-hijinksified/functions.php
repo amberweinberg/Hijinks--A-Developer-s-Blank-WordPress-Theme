@@ -46,7 +46,7 @@ add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 50, 50, true );
 add_image_size( 'category-thumb', 300, 9999, true );
 
-// ******************* Add Custom Post Thumbnails & Taxonomies ****************** //
+// ******************* Add Custom Post Types & Taxonomies ****************** //
 
 register_post_type('custom', array(
 	'label' => __('Custom Post Type'),
@@ -98,7 +98,7 @@ function cd_custom_meta_save( $id )
 
 }
 
-// ******************* Add Custom Meta Boxes ****************** //
+// ******************* Add Options to Theme Customizer ****************** //
 
 
 function themename_customize_register($wp_customize){
