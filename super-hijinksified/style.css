@@ -14,7 +14,6 @@ Author URI: http://www.amberweinberg.com
 
 body { background: url('images/bkg.jpg') #FFF; color: #000; font: 14px Arial, Helvetica, sans-serif; margin: 0 auto; width: 996px; }
 
-
 h1 {}
 h2 {}
 h3 {}
@@ -41,12 +40,6 @@ a:hover {}
 
 /*Blog*/
 
-.commentlist { float: left; margin: 0; list-style: none; padding: 0; position: relative; width: 100%; }
-.commentlist > li { padding: 10px; }
-.comment-author img { float: left; margin-right: 5px; }
-.commentmetadata { position: absolute; right: 10px; top: 10px; }
-
-#respond { float: left; margin-top: 30px; }
 
 /*****MEDIA QUERIES FOR MOBILE STYLES *******/
 
