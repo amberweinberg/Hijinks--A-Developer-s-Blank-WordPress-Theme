@@ -59,6 +59,7 @@ register_post_type('custom', array(
 	'query_var' => false,
 	'supports' => array('title', 'editor', 'author'),
 ));
+
 add_action( 'init', 'build_taxonomies', 0 );
 
 function build_taxonomies() {

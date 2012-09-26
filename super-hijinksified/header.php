@@ -4,7 +4,7 @@
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 	<head>
-	  <meta charset="utf-8">
+	  	<meta charset="utf-8">
 			
 		<title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
 		
@@ -14,7 +14,7 @@
 		<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 		<?php wp_head(); ?>
 		
-			<script src="<?php bloginfo('template_url');?>/js/libs/modernizr-2.5.0.min.js"></script>
+		<script src="<?php bloginfo('template_url');?>/js/libs/modernizr-2.5.0.min.js"></script>
 	</head>
 	
 	<body <?php body_class(); ?>>
