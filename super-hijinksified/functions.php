@@ -123,4 +123,25 @@ function themename_customize_register($wp_customize){
 
 add_action('customize_register', 'themename_customize_register');
 
+
+// ******************* Add Shortcode ****************** //
+
+function secondaryCallout($atts, $content = null) {
+	extract(shortcode_atts(array(
+	'link'	=> '#',
+    'link_title'	=> '',
+    'content'	=> '',
+    ), $atts));
+
+	$out = '
+		<div class="secondaryCallout tertiaryColorBkg">
+			'.$content.' <a class="secondaryColorText" title="'.$link_title.'" href="'.$link.'">'.$link_title.' &gt;</a>
+		</div>
+	';
+
+    return $out;
+}
+ 
+add_shortcode('secondary_callout', 'secondaryCallout');
+
 ?>
