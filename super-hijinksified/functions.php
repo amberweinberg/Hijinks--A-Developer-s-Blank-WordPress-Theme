@@ -144,4 +144,6 @@ function secondaryCallout($atts, $content = null) {
  
 add_shortcode('secondary_callout', 'secondaryCallout');
 
+add_filter('widget_text', 'do_shortcode');
+
 ?>
