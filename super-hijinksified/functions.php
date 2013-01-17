@@ -76,11 +76,8 @@ function cd_add_quote_meta()
 
 function cd_quote_meta_cb( $post )
 {
-    // Get values for filling in the inputs if we have them.
     $customMeta = get_post_meta( $post->ID, '_cd_custom_meta', true );
 
-    // Nonce to verify intention later
-    wp_nonce_field( 'save_quote_meta', 'custom_nonce' );
     ?>
     <p>
         <label for="customMeta">The title</label>
