@@ -76,12 +76,12 @@ function cd_add_quote_meta()
 
 function cd_quote_meta_cb( $post )
 {
-    $customMeta = get_post_meta( $post->ID, '_cd_custom_meta', true );
+    $customMeta = get_post_meta( $post->ID, 'customMeta', true );
 
     ?>
     <p>
         <label for="customMeta">The title</label>
-         <input type="text" class="widefat" id="customMeta" name="_cd_custom_meta" value="<?php echo $customMeta;?>" />
+         <input type="text" class="widefat" id="customMeta" name="customMeta" value="<?php echo $customMeta;?>" />
     </p>    
 <?php
 
@@ -91,8 +91,8 @@ add_action( 'save_post', 'cd_custom_meta_save' );
 function cd_custom_meta_save( $id )
 {
 
-    if( isset( $_POST['_cd_custom_meta'] ) )
-        update_post_meta( $id, '_cd_custom_meta', $_POST['_cd_custom_meta'] );
+    if( isset( $_POST['customMeta'] ) )
+        update_post_meta( $id, 'customMeta', $_POST['customMeta'] );
 
 }
 
