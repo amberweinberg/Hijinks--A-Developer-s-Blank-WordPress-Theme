@@ -57,7 +57,7 @@ register_post_type('custom', array(
 	'hierarchical' => false,
 	'rewrite' => true,
 	'query_var' => false,
-	'supports' => array('title', 'editor', 'author'),
+	'supports' => array('title', 'editor', 'author')
 ));
 
 add_action( 'init', 'build_taxonomies', 0 );

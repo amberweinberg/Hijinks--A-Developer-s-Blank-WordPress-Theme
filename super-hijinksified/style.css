@@ -12,13 +12,22 @@ Author URI: http://www.amberweinberg.com
 
 /****BODY STYLES********/
 
-body { background: url('images/bkg.jpg') #FFF; color: #000; font: 14px Arial, Helvetica, sans-serif; margin: 0 auto; width: 996px; }
+body { 
+	background: url('images/bkg.jpg') #FFF; 
+	color: #000; 
+	font: 14px Arial, Helvetica, sans-serif; 
+	margin: 0 auto; 
+	width: 996px; 
+}
 
 h1 {}
 h2 {}
 h3 {}
 
-a { text-decoration: none; }
+a { 
+	text-decoration: none; 
+}
+
 a:hover {}
 
 /****HEADER STYLES*******/
@@ -35,36 +44,27 @@ a:hover {}
 
 /*****SUB CONTENT STYLES*******/
 
-.alignleft { float: left; margin-right: 15px; }
-.alignright { float: right; margin-left: 15px; }
+.alignleft { 
+	float: left; 
+	margin-right: 15px; 
+}
+
+.alignright { 
+	float: right; 
+	margin-left: 15px; 
+}
 
 /*Blog*/
 
 
 /*****MEDIA QUERIES FOR MOBILE STYLES *******/
 
-@media only screen and (min-width: 480px) {
+@media only screen and (max-width: 1025px) {
 
 
 
 }
 
-@media only screen and (min-width: 768px) {
-
-
-}
-
-@media only screen and (min-width: 992px) {
-
-
-
-}
-
-@media only screen and (min-width: 1382px) {
-
-
-
-}
 
 /******PRINT STYLES*********/
 
