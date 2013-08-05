@@ -57,6 +57,7 @@ register_post_type('custom', array(
 	'hierarchical' => false,
 	'rewrite' => true,
 	'query_var' => false,
+	'has_archive' => true,
 	'supports' => array('title', 'editor', 'author')
 ));
 
