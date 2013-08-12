@@ -67,35 +67,6 @@ function build_taxonomies() {
     register_taxonomy( 'taxo', 'custom', array( 'hierarchical' => true, 'label' => 'Custom Taxonomy', 'query_var' => true, 'rewrite' => true ) ); 
 }
 
-// ******************* Add Custom Meta Boxes ****************** //
-
-add_action( 'add_meta_boxes', 'cd_add_quote_meta' );
-function cd_add_quote_meta()
-{
-    add_meta_box( 'quote-meta', __( 'A Custom Meta Box' ), 'cd_quote_meta_cb', 'page', 'normal', 'high' );
-}
-
-function cd_quote_meta_cb( $post )
-{
-    $customMeta = get_post_meta( $post->ID, 'customMeta', true );
-
-    ?>
-    <p>
-        <label for="customMeta">The title</label>
-         <input type="text" class="widefat" id="customMeta" name="customMeta" value="<?php echo $customMeta;?>" />
-    </p>    
-<?php
-
-}
-
-add_action( 'save_post', 'cd_custom_meta_save' );
-function cd_custom_meta_save( $id )
-{
-
-    if( isset( $_POST['customMeta'] ) )
-        update_post_meta( $id, 'customMeta', $_POST['customMeta'] );
-
-}
 
 // ******************* Add Options to Theme Customizer ****************** //
 
