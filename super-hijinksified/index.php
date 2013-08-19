@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 	
-	<?php query_posts('pagename=home'); if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-		<?php  // put loop info here! ?>
-	<?php endwhile; ?>
+	<?php $query = new WP_Query('pagename=home'); if ( $query->have_posts() ) { while ( $query->have_posts() ) { $query->the_post(); ?>
+		<?php the_title();?>
+	<?php } } wp_reset_postdata(); ?>
 
 <?php get_footer(); ?>
