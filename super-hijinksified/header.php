@@ -21,5 +21,8 @@
 	<body <?php body_class(); ?>>
 	
 		<header>
-			<?php wp_nav_menu( array('menu' => 'Main', 'container' => false, )); ?>
+			<div class="container">
+				<a class="logo" href="<?php bloginfo('url');?>"><img src="<?php bloginfo('template_url');?>/images/logo.jpg" alt="<?php bloginfo('description');?>"/></a>
+				<?php wp_nav_menu( array('menu' => 'Main', 'container' => false, )); ?>
+			</div>
 		</header>
