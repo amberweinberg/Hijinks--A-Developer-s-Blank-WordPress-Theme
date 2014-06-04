@@ -70,24 +70,28 @@ function build_taxonomies() {
 
 // ******************* Add Options to Theme Customizer ****************** //
 
-
 function themename_customize_register($wp_customize){
+
+	// Section Title
+	
     $wp_customize->add_section('themename_section_name', array(
 	    'title' => __('Section Title', 'themename'),
-	    'priority' => 120,
+	    'priority' => 130,
 	));
 	
-	$wp_customize->add_setting('themename_theme_options[themename_option_name]', array(
-	    'default'        => 'Input description',
-	    'capability'     => 'edit_theme_options',
-	    'type'           => 'option',
-	));
+		// Option Title
 	
-	$wp_customize->add_control('themename_option_name', array(
-	    'label'      => __('Name of option', 'themename'),
-	    'section'    => 'themename_section_name',
-	    'settings'   => 'themename_theme_options[themename_option_name]',
-	));
+		$wp_customize->add_setting('themename_theme_options[themename_option_name]', array(
+		    'default'        => 'Input description',
+		    'capability'     => 'edit_theme_options',
+		    'type'           => 'option',
+		));
+		
+		$wp_customize->add_control('themename_option_name', array(
+		    'label'      => __('Name of option', 'themename'),
+		    'section'    => 'themename_section_name',
+		    'settings'   => 'themename_theme_options[themename_option_name]',
+		));
 }
 
 add_action('customize_register', 'themename_customize_register');
