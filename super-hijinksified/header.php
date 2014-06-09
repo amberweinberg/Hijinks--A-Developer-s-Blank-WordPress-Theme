@@ -14,8 +14,6 @@
 		
 		<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 		<?php wp_head(); ?>
-		
-		<script src="<?php bloginfo('template_url');?>/js/libs/modernizr-2.5.0.min.js"></script>
 	</head>
 	
 	<body <?php body_class(); ?>>
