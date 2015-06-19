@@ -1,5 +1,8 @@
 		<footer></footer>
 		
+		<!--Scripts-->
+		
+		<script src="<?php bloginfo('template_url');?>/js/jquery.meanmenu.min.js"></script>
 		<script src="<?php bloginfo('template_url');?>/js/script.js"></script>
 		
 		<!--[if lt IE 9 ]>
