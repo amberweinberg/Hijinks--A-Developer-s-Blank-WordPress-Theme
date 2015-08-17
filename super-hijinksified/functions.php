@@ -82,15 +82,15 @@ function themename_customize_register($wp_customize){
 		// Option Title
 	
 		$wp_customize->add_setting('themename_theme_options[themename_option_name]', array(
-		    'default'        => 'Input description',
+		    'default'        => '',
 		    'capability'     => 'edit_theme_options',
-		    'type'           => 'option',
 		));
 		
 		$wp_customize->add_control('themename_option_name', array(
 		    'label'      => __('Name of option', 'themename'),
 		    'section'    => 'themename_section_name',
 		    'settings'   => 'themename_theme_options[themename_option_name]',
+		    'type'     => 'textarea'
 		));
 }
 
