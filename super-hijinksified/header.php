@@ -4,7 +4,7 @@
 	  	<meta charset="utf-8">
 	  	<meta name="viewport" content="width=device-width, initial-scale=1">
 			
-		<title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
+		<title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('title'); ?></title>
 		
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="<?php bloginfo('template_url');?>/css/meanmenu.min.css">

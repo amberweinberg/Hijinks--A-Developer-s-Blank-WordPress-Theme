@@ -4,7 +4,7 @@
 
 if ( function_exists('register_sidebar') ) {
 	register_sidebar(array(
-		'name' => 'Pages',
+		'name' => 'Blog',
 		'before_widget' => '<li id="%1$s" class="widget %2$s">',
 		'after_widget' => '</li>',
 		'before_title' => '<h2>',
@@ -43,8 +43,8 @@ function wpe_excerpt($length_callback='', $more_callback='') {
 // ******************* Add Post Thumbnails ****************** //
 
 add_theme_support( 'post-thumbnails' );
-set_post_thumbnail_size( 50, 50, true );
-add_image_size( 'category-thumb', 300, 9999, true );
+//set_post_thumbnail_size( 50, 50, true );
+//add_image_size( 'category-thumb', 300, 9999, true );
 
 // ******************* Add Custom Post Types & Taxonomies ****************** //
 
@@ -67,34 +67,19 @@ function build_taxonomies() {
     register_taxonomy( 'taxo', 'custom', array( 'hierarchical' => true, 'label' => 'Custom Taxonomy', 'query_var' => true, 'rewrite' => true ) ); 
 }
 
+// ******************* ACF Options Page ****************** //
 
-// ******************* Add Options to Theme Customizer ****************** //
-
-function themename_customize_register($wp_customize){
-
-	// Section Title
+if( function_exists('acf_add_options_page') ) {
 	
-    $wp_customize->add_section('themename_section_name', array(
-	    'title' => __('Section Title', 'themename'),
-	    'priority' => 130,
+	acf_add_options_page(array(
+		'page_title' 	=> 'Theme General Settings',
+		'menu_title'	=> 'Theme Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
 	));
 	
-		// Option Title
-	
-		$wp_customize->add_setting('themename_theme_options[themename_option_name]', array(
-		    'default'        => '',
-		    'capability'     => 'edit_theme_options',
-		));
-		
-		$wp_customize->add_control('themename_option_name', array(
-		    'label'      => __('Name of option', 'themename'),
-		    'section'    => 'themename_section_name',
-		    'settings'   => 'themename_theme_options[themename_option_name]',
-		    'type'     => 'textarea'
-		));
 }
-
-add_action('customize_register', 'themename_customize_register');
 
 // ******************* Include jQuery Properly ****************** //
 

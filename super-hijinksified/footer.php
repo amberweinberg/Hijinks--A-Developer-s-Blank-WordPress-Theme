@@ -5,10 +5,9 @@
 		<script src="<?php bloginfo('template_url');?>/js/jquery.meanmenu.min.js"></script>
 		<script src="<?php bloginfo('template_url');?>/js/script.js"></script>
 		
-		<!--[if lt IE 9 ]>
-		  <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-		  <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-		<![endif]-->
+		<!--Warn Old Browsers To Quit Being Old-->
+		
+		<script>var $buoop = {c:2};function $buo_f(){var e = document.createElement("script");e.src = "//browser-update.org/update.min.js";document.body.appendChild(e);};try {document.addEventListener("DOMContentLoaded", $buo_f,false)}catch(e){window.attachEvent("onload", $buo_f)}</script> 
 		
 		<?php wp_footer(); ?>
 	
