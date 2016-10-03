@@ -16,10 +16,12 @@
 	</head>
 	
 	<body <?php body_class(); ?>>
+		
+		<!--Header-->
 	
 		<header>
 			<div class="container">
-				<a class="logo" href="<?php bloginfo('url');?>"><img src="<?php bloginfo('template_url');?>/images/logo.jpg" alt="<?php bloginfo('title');?>"/></a>
+				<a class="logo" href="<?php bloginfo('url');?>"><img src="<?php bloginfo('template_url');?>/svgs/logo.svg" alt="<?php bloginfo('title');?>"/></a>
 				<nav><?php wp_nav_menu( array('menu' => 'Main', 'container' => false, )); ?></nav>
 			</div>
 		</header>

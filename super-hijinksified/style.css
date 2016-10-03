@@ -54,6 +54,10 @@ img {
 	max-width: 100%;
 }
 
+iframe {
+    max-width: 100%;
+}
+
 h1 {
     
 }
@@ -74,6 +78,11 @@ h5 {
     
 }
 
+header, section, footer {
+	float: left;
+	width: 100%;
+}
+
 article p,
 article ol,
 article ul {
@@ -86,10 +95,6 @@ article ul {
 
 /***************************************************************************************************************************************************************************************/
 
-header, section, footer {
-	float: left;
-	width: 100%;
-}
 
 
 

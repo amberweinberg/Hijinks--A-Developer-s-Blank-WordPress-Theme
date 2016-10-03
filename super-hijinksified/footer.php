@@ -1,4 +1,10 @@
-		<footer></footer>
+		<!--Footer-->
+		
+		<footer>
+			<div class="container">
+				<?php wp_nav_menu( array('menu' => 'Footer', 'container' => false, )); ?>
+			</div>
+		</footer>
 		
 		<!--Scripts-->
 		
