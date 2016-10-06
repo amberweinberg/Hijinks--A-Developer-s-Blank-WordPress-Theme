@@ -90,4 +90,13 @@ function my_jquery_enqueue() {
    wp_enqueue_script('jquery');
 }
 
+// ******************* Add SVG Upload Support ****************** //
+
+function wpcontent_svg_mime_type( $mimes = array() ) {
+  $mimes['svg']  = 'image/svg+xml';
+  $mimes['svgz'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter( 'upload_mimes', 'wpcontent_svg_mime_type' )
+
 ?>
