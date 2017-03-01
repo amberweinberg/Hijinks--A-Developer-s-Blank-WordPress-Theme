@@ -29,7 +29,8 @@ html {
 body { 
 	background: #FFF; 
 	color: #000; 
-	font: 1em Arial, Helvetica, sans-serif; 
+	font: 1rem Arial, Helvetica, sans-serif; 
+    -webkit-font-smoothing: antialiased;
 }
 
 a { 
@@ -70,23 +71,9 @@ h3 {
     
 }
 
-h4 {
-    
-}
-
-h5 {
-    
-}
-
 header, section, footer {
 	float: left;
 	width: 100%;
-}
-
-p,
-ol,
-ul {
-    
 }
 
 .btn {
@@ -95,6 +82,12 @@ ul {
 
 .btn:hover {
 	
+}
+
+.flex-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 /***************************************************************************************************************************************************************************************/
@@ -143,10 +136,14 @@ ul {
 	margin-left: 15px; 
 }
 
-.aligncenter,
-.alignnone {
+.aligncenter {
     display: block;
     margin: 0 auto 20px;
+}
+
+.alignnone {
+    display: block;
+    margin: 0 0 20px;
 }
 
 .wp-caption {
