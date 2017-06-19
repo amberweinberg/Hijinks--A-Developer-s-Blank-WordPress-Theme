@@ -7,7 +7,7 @@
 	
 	    <!--Hero-->
 		
-		<section id="hero">
+		<section class="hero">
     		<div class="container">
         		
     		</div>

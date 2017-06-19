@@ -8,7 +8,6 @@
 		
 		<!--Scripts-->
 		
-		<script src="<?php bloginfo('template_url');?>/js/jquery.meanmenu.min.js"></script>
 		<script src="<?php bloginfo('template_url');?>/js/script.js"></script>
 		
 		<!--Warn Old Browsers To Quit Being Old-->

@@ -6,7 +6,6 @@
 			
 		<title><?php bloginfo('title'); ?> <?php wp_title();?></title>
 		
-		<link rel="stylesheet" href="<?php bloginfo('template_url');?>/css/meanmenu.min.css">
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>"/>
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		
