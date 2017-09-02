@@ -3,11 +3,19 @@
 		<footer>
 			<div class="container">
 				<?php wp_nav_menu( array('menu' => 'Footer', 'container' => false, )); ?>
+				
+				<ul class="social">
+					<li><a href="<?php the_field('facebook_url','option');?>" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i><span class="accessibility">Facebook</span></a></li>
+					<li><a href="<?php the_field('twitter_url','option');?>" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i><span class="accessibility">Twitter</span></a></li>
+					<li><a href="<?php the_field('instagram_url','option');?>" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i><span class="accessibility">Instagram</span></a></li>
+					<li><a href="<?php the_field('youtube_url','option');?>" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i><span class="accessibility">Youtube</span></a></li>
+				</ul>
 			</div>
 		</footer>
 		
 		<!--Scripts-->
 		
+		<script src="https://use.fontawesome.com/7d991d7335.js"></script>
 		<script src="<?php bloginfo('template_url');?>/js/script.js"></script>
 		
 		<!--Warn Old Browsers To Quit Being Old-->
