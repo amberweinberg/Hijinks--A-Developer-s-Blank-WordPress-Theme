@@ -44,7 +44,7 @@ function wpe_excerpt($length_callback='', $more_callback='') {
 
 add_theme_support( 'post-thumbnails' );
 //set_post_thumbnail_size( 50, 50, true );
-//add_image_size( 'category-thumb', 300, 9999, true );
+add_image_size( 'xlarge', 1200, 1200);
 
 // ******************* Add Custom Post Types & Taxonomies ****************** //
 

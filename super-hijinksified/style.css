@@ -165,12 +165,25 @@ footer {
 
 /***************************************************************************************************************************************************************************************/
 
-/*MQ MAX-WIDTH 1025*/
+/*MQ MAX-WIDTH 850*/
 
 /***************************************************************************************************************************************************************************************/
 
-@media only screen and (max-width: 64.0625em) {
 
+@media only screen and (max-width: 53.125em) {
+
+	/***Header***/
+	
+	header .mobile-menu, 
+	header.active .mobile-menu .fa-close,
+	header.active nav {
+		display: block;
+	}
+	
+	header .mobile-menu .fa-close,
+	header.active .mobile-menu .fa-bars {
+		display: none;
+	}
 
 
 }
