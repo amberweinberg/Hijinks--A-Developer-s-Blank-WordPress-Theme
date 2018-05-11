@@ -22,6 +22,12 @@ Version: 1.0
 
 /***************************************************************************************************************************************************************************************/
 
+:root {
+  --darkblue: #135482;
+  --lightblue: #1a9bd7;
+  --black: #000;
+}
+
 html {
     font-size: 100%;
 }
@@ -96,6 +102,10 @@ footer {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+}
+
+.grid {
+	display: grid;
 }
 
 .accessibility {
@@ -174,21 +184,26 @@ header .mobile-menu {
 
 /***************************************************************************************************************************************************************************************/
 
-
 @media only screen and (max-width: 53.125em) {
 
 	/***Header***/
 	
 	header .mobile-menu, 
-	header.active .mobile-menu .fa-close,
+	header.active .mobile-menu .fa-times,
 	header.active nav {
 		display: block;
 	}
 	
-	header .mobile-menu .fa-close,
+	header .mobile-menu .fa-times,
 	header.active .mobile-menu .fa-bars,
 	header nav {
 		display: none;
+	}
+	
+	header .mobile-menu {
+		background: none;
+		border: none;
+		border-radius: 0;
 	}
 
 	header nav {
@@ -216,7 +231,7 @@ header .mobile-menu {
 		border: none;
 		height: auto;
 		margin: 0;
-		padding: 15px 20px;
+		padding: 15px 0;
 	}
 	
 	/*Dropdowns*/

@@ -4,7 +4,7 @@
 	  	<meta charset="utf-8">
 	  	<meta name="viewport" content="width=device-width, initial-scale=1">
 			
-		<title><?php wp_title();?></title>
+		<title><?php bloginfo('title') . wp_title(' | ');?></title>
 		
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>"/>
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />

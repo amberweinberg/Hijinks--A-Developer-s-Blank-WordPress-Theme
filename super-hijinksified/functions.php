@@ -118,4 +118,12 @@ add_filter( 'wp_get_attachment_image_src', 'fix_wp_get_attachment_image_svg', 10
     return $image;
 } 
 
+// ******************* Remove Admin Bar ****************** //
+
+add_action('after_setup_theme', 'remove_admin_bar');
+ 
+function remove_admin_bar() {
+	 show_admin_bar(false);
+}
+
 ?>
