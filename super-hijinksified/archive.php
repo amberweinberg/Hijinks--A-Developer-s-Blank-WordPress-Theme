@@ -9,8 +9,11 @@
 					<?php wpe_excerpt('wpe_excerptlength_index', 'wpe_excerptmore'); ?>
 				</div>
 			<?php endwhile; ?>
+			
+			<?php get_sidebar(); ?>
+			
+			<?php posts_nav_link();?>
 		</div>
 	</section>
 	
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
