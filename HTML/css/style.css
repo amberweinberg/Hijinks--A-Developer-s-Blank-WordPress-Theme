@@ -13,9 +13,9 @@
 /***************************************************************************************************************************************************************************************/
 
 :root {
-  --darkblue: #135482;
-  --lightblue: #1a9bd7;
+  --white: #fff;
   --black: #000;
+  --bodyFont: Arial, Helvetica, sans-serif;
 }
 
 html {
@@ -23,9 +23,9 @@ html {
 }
 
 body { 
-	background: #FFF; 
-	color: #000; 
-	font: 1rem Arial, Helvetica, sans-serif; 
+	background: var(--white); 
+	color: var(--black); 
+	font: 1rem var(--bodyFont); 
     -webkit-font-smoothing: antialiased;
 }
 
@@ -38,21 +38,11 @@ a:hover {
 	
 }
 
-.container {
-	clear: both;
-	margin: 0 auto; 
-	max-width: 960px;
-	padding: 0 20px;
-	position: relative;
-}
-
-img {
+img,
+svg,
+iframe {
 	height: auto;
 	max-width: 100%;
-}
-
-iframe {
-    max-width: 100%;
 }
 
 h1 {
@@ -86,6 +76,14 @@ article {
 
 .btn:hover {
 	
+}
+
+.container {
+	clear: both;
+	margin: 0 auto; 
+	max-width: 960px;
+	padding: 0 20px;
+	position: relative;
 }
 
 .flex-container {
