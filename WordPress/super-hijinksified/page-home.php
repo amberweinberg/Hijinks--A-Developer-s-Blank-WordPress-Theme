@@ -7,7 +7,7 @@
 	
 	    <!--Hero-->
 	    
-	    <?php $url = wp_get_attachment_image_url( get_sub_field('hero_background_image'), 'xlarge' ); ?>
+	    <?php $url = wp_get_attachment_image_url( get_field('hero_background_image'), 'xlarge' ); ?>
 		
 		<section class="hero" style="background-image: url('<?php echo $url;?>');">
     		<div class="container">
