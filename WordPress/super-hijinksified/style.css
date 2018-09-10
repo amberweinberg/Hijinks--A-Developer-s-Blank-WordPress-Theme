@@ -203,6 +203,8 @@ header .mobile-menu {
 		background: none;
 		border: none;
 		border-radius: 0;
+		font-size: 1.875rem;
+		padding: 0;
 	}
 
 	header nav {
