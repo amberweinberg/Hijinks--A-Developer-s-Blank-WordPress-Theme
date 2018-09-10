@@ -4,7 +4,7 @@
 	
 		<!--Page Hero-->
 		
-		<?php include_once('page-hero');?>
+		<?php include_once('includes/page-hero');?>
 		
 		<!--Page Content-->
 		
