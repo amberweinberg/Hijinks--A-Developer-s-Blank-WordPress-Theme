@@ -4,7 +4,7 @@
 	  	<meta charset="utf-8">
 	  	<meta name="viewport" content="width=device-width, initial-scale=1">
 			
-		<title><?php bloginfo('title') . wp_title(' | ');?></title>
+		<title><?php wp_title(' | ');?></title>
 		
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>"/>
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
@@ -14,6 +14,10 @@
 	</head>
 	
 	<body <?php body_class(); ?>>
+		
+		<!--Skip to main content-->
+		
+		<a class="accessibility" href="#main">Skip To Content</a>
 		
 		<!--Header-->
 	
@@ -33,4 +37,4 @@
 
 		<!--Main Content-->
 		
-		<main>
+		<main id="main">

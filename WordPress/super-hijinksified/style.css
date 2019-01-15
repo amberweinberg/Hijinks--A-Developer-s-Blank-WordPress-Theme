@@ -97,7 +97,6 @@ article {
 }
 
 .flex-container {
-	align-items: center;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -141,7 +140,7 @@ header .mobile-menu {
 /***Hero***/
 
 .hero {
-	background: no-repeat center #000;
+	background: no-repeat center var(--black);
 	background-size: cover;
 	height: 618px;
 	position: relative;
@@ -175,6 +174,13 @@ header .mobile-menu {
 
 .wp-caption {
     max-width: 100%;
+}
+
+/***Page Hero***/
+
+.page-hero {
+	background: no-repeat center;
+	background-size: cover;
 }
 
 /***************************************************************************************************************************************************************************************/

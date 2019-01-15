@@ -3,17 +3,22 @@
 	<article>
 		<h1>Search Results for "<?php echo sanitize_text_field($s);?>"</h1>
 		
-		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			<h1><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title();?></a></h1>
-			<?php the_excerpt();?>
-		<?php endwhile; ?>
+		<ul>
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+				<li>
+					<h2><a href="<?php the_permalink() ?>"><?php the_title();?></a></h2>
+					<?php the_excerpt();?>
+				</li>
+			<?php endwhile; ?>
+		</ul>
 	
 		<?php else : ?>
 	
 			<p>No posts found. Try a different search?</p>
-			<?php get_search_form(); ?>
 	
 		<?php endif; ?>
+		
+		<?php posts_nav_link();?>
 	</article>
 
 <?php get_footer(); ?>
