@@ -224,7 +224,7 @@ header .mobile-menu {
 	    width: 60px;
 	}
 	
-	header li.menu-item-has-children.active > .open-children i {
+	header li.menu-item-has-children.active > .open-children svg {
 		transform: rotate(-180deg);
 	}
 	
