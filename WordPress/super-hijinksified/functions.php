@@ -81,14 +81,20 @@ if( function_exists('acf_add_options_page') ) {
 	
 }
 
-// ******************* Include jQuery Properly ****************** //
+// ******************* Include Scripts Properly ****************** //
 
 if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
 function my_jquery_enqueue() {
    wp_deregister_script('jquery');
-   wp_register_script('jquery', "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js", false, null);
+   wp_register_script('jquery', "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js", false, null, true );
    wp_enqueue_script('jquery');
 }
+
+function wpdocs_scripts_method() {
+    wp_register_script( 'custom-scripts', get_stylesheet_directory_uri() . '/js/script.js', array( 'jquery' ), '', true  );
+    wp_enqueue_script('custom-scripts');
+}
+add_action( 'wp_enqueue_scripts', 'wpdocs_scripts_method' );
 
 // ******************* Add SVG Upload Support ****************** //
 
