@@ -2,7 +2,7 @@
 
 jQuery(document).ready(function () {
 	
-	/************MOBILE MENU************/
+	/************MOBILE MENU W/O PARENT LINKS************/
 				
 	var menu = $('.mobile-menu');
 	var header = $('header');
@@ -15,8 +15,10 @@ jQuery(document).ready(function () {
 	        var status = header.hasClass('active');
 	      if(status){
 	        header.removeClass('active');
+	        $('html').removeClass('active');
 	      }else{
 	        header.addClass('active');
+	        $('html').addClass('active');
 	      }
 	  });
 	}
@@ -25,13 +27,7 @@ jQuery(document).ready(function () {
 		
 		// Add drop links
 		
-		$('header li.menu-item-has-children').each(function() {
-			$(this).append('<a class="open-children" href="#"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>');
-		});
-		
-		// On click
-		
-		$('.open-children').click( function(e) {
+		$('header li.menu-item-has-children > a').click(function(e) {
 			e.preventDefault();
 			e.stopPropagation();
 			e.stopImmediatePropagation();
@@ -52,14 +48,13 @@ jQuery(document).ready(function () {
 		header.removeClass('active');
 		$('header li.menu-item-has-children a').unbind();
 		$('header li.menu-item-has-children').unbind().removeClass('active');
-		
-		$('header .open-children').remove();
+		$('html').removeClass('active');
 
 	}
 	
 	// Active mobile menu
 	
-	if ($(window).width() < 951) {
+	if ($(window).width() < 1201) {
 	    mobileFiltering();
 	    mobileDrops();
 	} else {
@@ -67,7 +62,7 @@ jQuery(document).ready(function () {
 	}
 	
 	$( window ).resize(function() {
-	    if($(window).width() < 951 ) {
+	    if($(window).width() < 1201 ) {
 	        mobileFiltering();
 	        mobileDrops();
 	    } else {

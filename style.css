@@ -1,9 +1,9 @@
 /*
-Theme Name: Super Hijinksified
-Theme URI: http://www.amberweinberg.com/super-hijinksified-lightweight-wordpress-theme
+Theme Name: Studio Simpatico
+Theme URI: http://www.studiosimpati.co/
 Description: This theme is a derivative of Super Hijinksified, custom coded for the client.
-Author: Amber Weinberg
-Author URI: http://www.amberweinberg.com
+Author: Studio Simpatico
+Author URI: http://www.studiosimpati.co/
 Version: 1.0
 
 */
@@ -41,11 +41,17 @@ body {
 
 a { 
 	text-decoration: none;
-	transition: all .5s ease;
+	transition: all .25s ease;
 }
 
 a:hover {
-	
+}
+
+input[type=submit],
+button {
+	border-radius: 0;
+	font-family: inherit;
+	transition: all .25s ease;
 }
 
 img,
@@ -91,7 +97,7 @@ article {
 .container {
 	clear: both;
 	margin: 0 auto; 
-	max-width: 960px;
+	max-width: 1240px; /*1200*/
 	padding: 0 20px;
 	position: relative;
 }
@@ -142,7 +148,7 @@ header .mobile-menu {
 .hero {
 	background: no-repeat center var(--black);
 	background-size: cover;
-	height: 618px;
+	height: 100vh;
 	position: relative;
 }
 
@@ -190,6 +196,12 @@ header .mobile-menu {
 /***************************************************************************************************************************************************************************************/
 
 @media only screen and (max-width: 59.375em) {
+	
+	html.active,
+	html.active body {
+		height: 100%;
+		overflow: hidden;
+	}
 
 	/***Header***/
 	
@@ -214,10 +226,11 @@ header .mobile-menu {
 	}
 
 	header nav {
-		background: #fff;
-		display: none;
+		background: var(--white);
+		height: calc(100vh - 70px);
 		left: 0;
 		padding: 20px;
+		overflow: hidden;
 		position: absolute;
 		top: 100%;
 		width: 100%;
@@ -226,6 +239,8 @@ header .mobile-menu {
 	
 	header ul {
 		flex-wrap: wrap;
+		height: 100%;
+		overflow: auto;
 		text-align: center;
 	}
 	
@@ -238,7 +253,7 @@ header .mobile-menu {
 		border: none;
 		height: auto;
 		margin: 0;
-		padding: 15px 0;
+		padding: 0;
 	}
 	
 	/*Dropdowns*/

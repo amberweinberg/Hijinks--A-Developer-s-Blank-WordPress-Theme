@@ -6,7 +6,6 @@
 			
 		<title><?php wp_title(' | ');?></title>
 		
-		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>"/>
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		
 		<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
@@ -22,7 +21,7 @@
 		<!--Header-->
 	
 		<header>
-			<div class="container">
+			<div class="container flex-container">
 				<a class="logo" href="<?php bloginfo('url');?>"><img src="<?php bloginfo('template_url');?>/svgs/logo.svg" alt="<?php bloginfo('title');?>"/></a>
 				
 				<button class="mobile-menu">

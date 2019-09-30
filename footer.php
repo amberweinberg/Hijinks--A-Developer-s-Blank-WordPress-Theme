@@ -20,12 +20,14 @@
 						if($youtube) echo '<li><a href="'.$youtube.'" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i><span class="accessibility">Youtube</span></a></li>';
 					?>
 				</ul>
+				
+				<p class="copyright">&copy; <?php echo date("Y");?></p>
 			</div>
 		</footer>
 		
-		<!--Scripts-->
+		<!--External Scripts-->
 		
-		<script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+		<script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
 
 		<!--Warn Old Browsers To Quit Being Old-->
 		
